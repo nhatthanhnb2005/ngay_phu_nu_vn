@@ -9,6 +9,7 @@
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #2a1514;
@@ -19,6 +20,7 @@
     color-scheme: dark;
   }
 }
+
 :root[data-theme="dark"] {
   --bg: #2a1514;
   --card: #381c1b;
@@ -27,9 +29,11 @@
   --soft: #d9aaa6;
   color-scheme: dark;
 }
+
 html {
   scroll-padding-top: env(safe-area-inset-top, 0px);
 }
+
 body {
   margin: 0;
   background:
@@ -51,6 +55,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
 }
+
 #rain {
   position: fixed;
   inset: 0;
@@ -59,6 +64,7 @@ body {
   z-index: 0;
   pointer-events: none;
 }
+
 main {
   max-width: 680px;
   margin: 0 auto;
@@ -67,6 +73,7 @@ main {
   position: relative;
   z-index: 1;
 }
+
 h1 {
   font-family: "Dancing Script", Lora, Georgia, serif;
   font-weight: 700;
@@ -78,10 +85,12 @@ h1 {
   color: transparent;
   animation: up 1s ease both;
 }
+
 .sub {
   color: var(--soft);
   margin: 0 0 22px;
 }
+
 .qr {
   background: var(--bg);
   display: inline-block;
@@ -93,7 +102,8 @@ h1 {
     0 0 0 2px rgba(224, 32, 28, 0.15);
   animation: fl 5s ease-in-out infinite;
 }
-canvas {
+
+#qr {
   width: 100%;
   max-width: 420px;
   height: auto;
@@ -101,11 +111,13 @@ canvas {
   display: block;
   margin: 0 auto;
 }
+
 .hint {
   font-size: 14px;
   color: var(--soft);
   margin: 10px 0 26px;
 }
+
 .card {
   background: color-mix(in srgb, var(--card) 68%, transparent);
   backdrop-filter: blur(3px);
@@ -116,85 +128,103 @@ canvas {
   box-shadow: 0 8px 30px rgba(224, 32, 28, 0.15);
   border: 1px solid rgba(224, 32, 28, 0.15);
 }
+
 .card p.lead {
   font-weight: bold;
   margin-top: 0;
   text-align: center;
 }
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 li {
   padding: 10px 0 10px 26px;
   position: relative;
   border-top: 1px solid rgba(224, 32, 28, 0.18);
   animation: sway 6s ease-in-out infinite;
 }
+
 .w {
   display: inline-block;
   white-space: nowrap;
 }
+
 .c {
   display: inline-block;
   opacity: 0;
 }
+
 .go .c {
   animation: drop 0.9s cubic-bezier(0.3, 1.5, 0.5, 1)
     calc(var(--o, 0s) + var(--d, 0s)) both;
 }
+
 @keyframes drop {
   0% {
     opacity: 0;
     transform: translateY(-80px) rotate(-14deg);
   }
+
   100% {
     opacity: 1;
     transform: none;
   }
 }
+
 @keyframes sway {
   0%,
   100% {
     transform: translateX(-4px);
   }
+
   50% {
     transform: translateX(4px);
   }
 }
+
 @keyframes up {
   from {
     opacity: 0;
     transform: translateY(16px);
   }
+
   to {
     opacity: 1;
     transform: none;
   }
 }
+
 @keyframes fl {
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-8px);
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   li {
     animation: none;
   }
+
   .c {
     opacity: 1 !important;
     animation: none !important;
   }
+
   .qr,
   h1 {
     animation: none;
   }
 }
+
 li::before {
   content: "";
   position: absolute;
