@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Chúc mừng 20/10</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="rain" aria-hidden="true"></canvas>
+    <main>
+        <h1>Chúc mừng ngày 20/10</h1>
+        <p class="sub">Quét mã QR để đọc lời chúc</p>
+        <div class="qr"><canvas id="qr"></canvas></div>
+        <p class="hint">Quét mã để mở trang lời chúc này. Hãy để màn hình sáng và giữ điện thoại cách mã một chút khi
+            quét.</p>
+        <div class="card">
+            <p class="lead" id="lead">Nhân ngày 20/10, chúc tất cả phụ nữ Việt Nam luôn xinh đẹp, rạng rỡ và ngập tràn
+                hạnh phúc.</p>
+            <ul id="list"></ul>
+        </div>
+    </main>
+    <script src="qrcode.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
